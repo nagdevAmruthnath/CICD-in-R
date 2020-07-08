@@ -1,0 +1,10 @@
+stages:
+   - run
+   
+run test:
+   - stage: run
+   - script:
+      - apt-get update && apt-get install -y r-base
+      - Rscript sample_script.R
+   - tags:
+      - docker
