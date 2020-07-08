@@ -21,3 +21,6 @@ RMSE(pds, mtcars$mpg[26:32] )
 
 # view actual vs predicted
 data.frame(Actual = mtcars$mpg[26:32], prediction = pds )
+
+# save the model
+saveRDS(mpg_model, "mpg_model.RDS")
