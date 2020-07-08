@@ -1,7 +1,7 @@
 stages:
    - run
    
-run test:
+run_test:
    - stage: run
    - script:
       - apt-get update && apt-get install -y r-base
