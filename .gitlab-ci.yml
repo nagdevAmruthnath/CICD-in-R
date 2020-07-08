@@ -1,10 +1,12 @@
 stages:
-   - run
+   - build
    
-run_test:
-   - stage: run
-   - script:
-      - apt-get update && apt-get install -y r-base
-      - Rscript sample_script.R
-   - tags:
-      - docker
+# build pipeline  
+build container:
+  stage: build
+  script:
+    - apt-get update && apt-get install -y r-base
+    - Rscript sample_script.R
+    - echo container built successfully
+  tags:
+    - docker
